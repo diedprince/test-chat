@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер - Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header">
+            <div id="random-name">Имя: <span id="user-name"></span></div>
+            <button id="delete-chat-btn">Удалить историю</button>
+        </div>
+        
+        <div id="chat-window">
+            <div id="chat-history"></div>
+            <textarea id="message-input" placeholder="Введите сообщение..."></textarea>
+            <button id="send-message-btn">Отправить</button>
+        </div>
+
+        <div id="password-modal" class="hidden">
+            <input type="password" id="password-input" placeholder="Введите пароль">
+            <button id="confirm-password-btn">Подтвердить</button>
+            <p id="error-message" class="hidden"></p>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
